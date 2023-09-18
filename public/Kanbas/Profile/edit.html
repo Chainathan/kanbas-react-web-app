@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Profile - Edit</title>
+  </head>
+  <body>
+    <table border="1" width="100%">
+      <tr>
+        <td valign="top">
+          <ul>
+            <li><a href="/Kanbas/Profile/index.html">Account</a></li>
+            <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Inbox</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Studio</a></li>
+            <li><a href="#">Commons</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </td>
+        <td valign="top">
+          <ul>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="/Kanbas/Profile/index.html">Profile</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">ePortfolios</a></li>
+            <li><a href="#">Shared Content</a></li>
+            <li><a href="#">The Hub</a></li>
+            <li><a href="#">Qwickly Course Tools</a></li>
+            <li><a href="#">Global Announcements</a></li>
+          </ul>
+        </td>
+        <td valign="top">
+          <form action="/Kanbas/Profile/index.html">
+            <table>
+              <td>
+                <tr>
+                  <h2>Chainathan</h2>
+                </tr>
+                <tr>
+                  <label>
+                    Name:*
+                    <input
+                      name="fullName"
+                      type="text"
+                      value="Chainathan"
+                      placeholder="Name"
+                    />
+                  </label>
+                  <label>
+                    Pronouns:
+                    <select>
+                      <option>None</option>
+                    </select>
+                  </label>
+                </tr>
+                <br /><br />
+                <label>
+                  Title:
+                  <input name="Title" type="text" />
+                </label>
+                <tr>
+                  <h3>Contact</h3>
+                  <p>
+                    No registered services, you can add some on the
+                    <a href="#">settings</a> page
+                  </p>
+                </tr>
+                <tr>
+                  <h3>Biography</h3>
+                  <textarea cols="40" rows="3">
+Faculty, Software Engineer, AI, Space, and renewable ethusiast</textarea
+                  >
+                </tr>
+                <tr>
+                  <h3>Links</h3>
+                  <ul>
+                    <li>
+                      <a href="#">YouTube</a>
+                    </li>
+                  </ul>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Title</th>
+                        <th>URL</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <td><input type="text" value="YouTube" /></td>
+                      <td>
+                        <input type="text" value="https://www.youtube.com" />
+                      </td>
+                      <td><a href="#">Remove</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input
+                          type="button"
+                          name="addLine"
+                          value="Add another link"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <button>Cancel</button>
+                        <button>Save Profile</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <button>Edit Profile</button>
+                        <button>Cancel Editing</button>
+                      </td>
+                    </tr>
+                  </table>
+                </tr>
+              </td>
+            </table>
+          </form>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
