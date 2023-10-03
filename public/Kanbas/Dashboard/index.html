@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Profile - Edit</title>
+    <title>Dashboard</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -36,7 +36,7 @@
         </a>
       </div>
 
-      <div class="col text-center fs-6">CS5610.11550.202410 Modules</div>
+      <div class="col text-center fs-6">Dashboard</div>
 
       <div class="collapse col-1 show KanbasMenu" id="KanbasMenu">
         <a
@@ -111,7 +111,7 @@
           <i class="fa-solid fa-xmark text-secondary"></i>
         </a>
 
-        <a class="nav-link" href="/Kanbas/Profile/index.html" active>
+        <a class="nav-link" href="/Kanbas/Profile/index.html">
           <i class="fa-regular fa-user sidebar-icon account-icon"></i>
           <span>Account</span>
         </a>
@@ -167,7 +167,7 @@
             <img src="..\..\..\images\neu-logo.jpg" alt="logo" id="logo" />
           </a>
 
-          <a class="nav-link active" href="/Kanbas/Profile/index.html">
+          <a class="nav-link" href="/Kanbas/Profile/index.html">
             <i class="fa-regular fa-user sidebar-icon account-icon"></i>
             <span>Account</span>
           </a>
@@ -177,7 +177,7 @@
             Courses
           </a>
 
-          <a class="nav-link" href="/Kanbas/Dashboard/index.html">
+          <a class="nav-link active" href="#">
             <i class="fa-solid fa-gauge sidebar-icon"></i> Dashboard
           </a>
 
@@ -213,130 +213,153 @@
         </div>
       </div>
       <div class="col">
-        <div class="row">
-          <div class="col d-none d-md-block mb-10">
-            <nav class="navbar">
-              <div class="container-fluid">
-                <button class="navbar-toggler border-0" type="button">
-                  <span class="navbar-toggler-icon"></span>
-                  Chainathan's Profile
-                </button>
-              </div>
-            </nav>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 wd-sidebar-nav d-none d-md-block">
-            <nav class="nav flex-column">
-              <a class="nav-link" href="#">Notifications</a>
-              <a class="nav-link active" href="/Kanbas/Profile/index.html">
-                Profile
-              </a>
-              <a class="nav-link" href="#">Files</a>
-              <a class="nav-link" href="#">Settings</a>
-              <a class="nav-link" href="#">ePortfolios</a>
-              <a class="nav-link" href="#">Shared Content</a>
-              <a class="nav-link" href="#">The Hub</a>
-              <a class="nav-link" href="#">Qwickly Course Tools</a>
-              <a class="nav-link" href="#">Global Announcements</a>
-            </nav>
-          </div>
-          <div class="col">
-            <div class="wd-profile-main-content">
-              <div>
-                <i class="fa-regular fa-circle-user fa-7x"></i>
-                <a
-                  class="float-end btn btn-light active"
-                  href="/Kanbas/Profile/index.html"
-                >
-                  <i class="fa-solid fa-pencil"></i>
-                  Cancel Editing
-                </a>
-              </div>
-
-              <h3><label for="inputName">Name:*</label></h3>
-              <input
-                type="text"
-                id="inputName"
-                class="form-control wd-profile-name-title-input"
-                placeholder="Chainathan"
+        <div class="container ms-10 mt-4 wd-dashboard-container">
+          <h1>Dashboard</h1>
+          <hr />
+          <h3>Published Courses (8)</h3>
+          <hr />
+          <div class="d-flex flex-row flex-wrap">
+            <div class="card" style="width: 250px">
+              <img
+                src="../../images/bluesolid.png"
+                class="card-img-top"
+                alt="..."
               />
-
-              <h3><label for="pronoun">Pronouns:</label></h3>
-              <select id="pronoun" class="form-select">
-                <option selected>None</option>
-                <option value="He/Him">He/Him</option>
-                <option value="She/Her">She/Her</option>
-              </select>
-
-              <h3><label for="title">Title</label></h3>
-              <input
-                type="text"
-                id="title"
-                class="form-control wd-profile-name-title-input"
-              />
-
-              <h3>Contact</h3>
-              <p>
-                No registered service, you can add some on
-                <a href="#">Setting</a> page.
-              </p>
-
-              <h3><label for="bio">Biography</label></h3>
-              <textarea class="form-control" id="bio" rows="3">
-Faculty, Software Engineer, AI, Space, and renewables enthusiast</textarea
-              >
-
-              <h3>Links</h3>
-              <div class="container-fluid">
-                <div class="row">
-                  <span class="col">Title</span>
-                  <span class="col">URL</span>
-                </div>
-
-                <div class="row">
-                  <div class="col">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="YouTube"
-                    />
-                  </div>
-                  <div class="col-1">
-                    <i class="fa-solid fa-arrow-right" style="color: grey"></i>
-                  </div>
-                  <div class="col">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="http://youtube.com"
-                    />
-                  </div>
-                  <div class="col-1">
-                    <i class="fa-solid fa-xmark" style="color: red"></i>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <button type="button" class="btn btn-light col-2">
-                    Add Another Link
-                  </button>
-                </div>
+              <div class="card-body">
+                <h7 class="card-title"
+                  ><a href="/Kanbas/Courses/Home/screen.html">
+                    CS5610 12632 Web Dev...</a
+                  ></h7
+                >
+                <p class="card-text">
+                  CS5610.11550.202410 202504_1 Fall 2023 Semester Full...
+                </p>
               </div>
+            </div>
 
-              <hr />
-              <div class="float-end">
-                <a
-                  class="btn btn-light active"
-                  href="/Kanbas/Profile/index.html"
-                  >Cancel</a
+            <div class="card" style="width: 250px">
+              <img
+                src="../../images/bluesolid.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h7 class="card-title"
+                  ><a href="/Kanbas/Courses/Home/screen.html">
+                    CS5610 12632 Web Dev...</a
+                  ></h7
                 >
-                <a
-                  class="btn btn-danger active"
-                  href="/Kanbas/Profile/index.html"
+                <p class="card-text">
+                  CS5610.11550.202410 202504_1 Fall 2023 Semester Full...
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 250px">
+              <img
+                src="../../images/bluesolid.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h7 class="card-title"
+                  ><a href="/Kanbas/Courses/Home/screen.html">
+                    CS5610 12632 Web Dev...</a
+                  ></h7
                 >
-                  Save Change
-                </a>
+                <p class="card-text">
+                  CS5610.11550.202410 202504_1 Fall 2023 Semester Full...
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 250px">
+              <img
+                src="../../images/bluesolid.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h7 class="card-title"
+                  ><a href="/Kanbas/Courses/Home/screen.html">
+                    CS5610 12632 Web Dev...</a
+                  ></h7
+                >
+                <p class="card-text">
+                  CS5610.11550.202410 202504_1 Fall 2023 Semester Full...
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 250px">
+              <img
+                src="../../images/bluesolid.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h7 class="card-title"
+                  ><a href="/Kanbas/Courses/Home/screen.html">
+                    CS5610 12632 Web Dev...</a
+                  ></h7
+                >
+                <p class="card-text">
+                  CS5610.11550.202410 202504_1 Fall 2023 Semester Full...
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 250px">
+              <img
+                src="../../images/bluesolid.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h7 class="card-title"
+                  ><a href="/Kanbas/Courses/Home/screen.html">
+                    CS5610 12632 Web Dev...</a
+                  ></h7
+                >
+                <p class="card-text">
+                  CS5610.11550.202410 202504_1 Fall 2023 Semester Full...
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 250px">
+              <img
+                src="../../images/bluesolid.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h7 class="card-title"
+                  ><a href="/Kanbas/Courses/Home/screen.html">
+                    CS5610 12632 Web Dev...</a
+                  ></h7
+                >
+                <p class="card-text">
+                  CS5610.11550.202410 202504_1 Fall 2023 Semester Full...
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 250px">
+              <img
+                src="../../images/bluesolid.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h7 class="card-title"
+                  ><a href="/Kanbas/Courses/Home/screen.html">
+                    CS5610 12632 Web Dev...</a
+                  ></h7
+                >
+                <p class="card-text">
+                  CS5610.11550.202410 202504_1 Fall 2023 Semester Full...
+                </p>
               </div>
             </div>
           </div>

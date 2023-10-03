@@ -1,71 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <title>Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v6.4.0/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../index.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <table border="1" width="100%">
-      <tr>
-        <td valign="top">
-          <ul>
-            <li><a href="/Kanbas/Profile/index.html">Account</a></li>
-            <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-        </td>
-        <td valign="top">
-          <ul>
-            <li><a href="#">Notifications</a></li>
-            <li><a href="/Kanbas/Profile/index.html">Profile</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">ePortfolios</a></li>
-            <li><a href="#">Shared Content</a></li>
-            <li><a href="#">The Hub</a></li>
-            <li><a href="#">Qwickly Course Tools</a></li>
-            <li><a href="#">Global Announcements</a></li>
-          </ul>
-        </td>
-        <td valign="top">
-          <label>Chainathan's Profile</label>
-          <hr />
-          <form action="/Kanbas/Profile/edit.html">
-            <button style="float: right">Edit Profile</button>
-            <table>
-              <td>
-                <tr>
-                  <h2>Chainathan</h2>
-                </tr>
-                <tr>
-                  <h3>Contact</h3>
-                  <p>
-                    No registered services, you can add some on the
-                    <a href="#">settings</a> page
-                  </p>
-                </tr>
-                <tr>
-                  <h3>Biography</h3>
-                  <p>
-                    Faculty, Software Engineer, AI, Space, and renewable
-                    ethusiast
-                  </p>
-                </tr>
-                <tr>
-                  <h3>Links</h3>
-                  <p><a href="#">YouTube</a></p>
-                </tr>
-              </td>
-            </table>
-          </form>
-        </td>
-      </tr>
-    </table>
+    <div
+      class="row container-fluid bg-black text-white m-0 p-0 pt-1 pb-1 d-md-none"
+    >
+      <div class="col-1 collapse show CourseMenu" id="CourseMenu">
+        <a
+          href="#"
+          data-bs-toggle="collapse"
+          data-bs-target=".KanbasMenu"
+          aria-expanded="false"
+          aria-controls="KanbasMenu CommonContent"
+        >
+          <i class="fa-solid fa-bars text-white"></i>
+        </a>
+      </div>
+
+      <div class="col text-center fs-6">CS5610.11550.202410 Modules</div>
+
+      <div class="collapse col-1 show KanbasMenu" id="KanbasMenu">
+        <a
+          href="#"
+          data-bs-toggle="collapse"
+          data-bs-target=".CourseMenu"
+          aria-expanded="false"
+          aria-controls="CourseMenu CommonContent"
+        >
+          <i class="fa-solid fa-glasses text-white"></i>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="collapse container wd-sidebar-nav collapsed-text CourseMenu"
+      id="CourseMenu"
+    >
+      <nav class="nav flex-column">
+        <a class="nav-link" href="#">
+          <i class="fa-solid fa-bell text-red"></i>
+          Notifications
+        </a>
+        <a class="nav-link fw-bold" href="/Kanbas/Profile/index.html">
+          <i class="fa-solid fa-person text-red"></i>
+          Profile
+        </a>
+        <a class="nav-link" href="#">
+          <i class="fa-solid fa-folder text-red"></i>
+          Files
+        </a>
+        <a class="nav-link" href="#">
+          <i class="fa-solid fa-gear text-red"></i>
+          Settings
+        </a>
+        <a class="nav-link" href="#">
+          <i class="fa-solid fa-portrait text-red"></i>
+          ePortfolios
+        </a>
+        <a class="nav-link" href="#">
+          <i class="fa-solid fa-newspaper text-red"></i>
+          Shared Content
+        </a>
+        <a class="nav-link" href="#">
+          <i class="fa-solid fa-hubspot text-red"></i>
+          The Hub</a
+        >
+        <a class="nav-link" href="#">
+          <i class="fa-solid fa-tools text-red"></i>
+          Qwickly Course Tools
+        </a>
+        <a class="nav-link" href="#">
+          <i class="fa-solid fa-microphone text-red"></i>
+          Global Announcements
+        </a>
+      </nav>
+    </div>
+
+    <div
+      class="collapse container wd-kanbas-nav-collapsed KanbasMenu"
+      id="KanbasMenu"
+    >
+      <nav class="nav flex-column">
+        <a
+          href="#"
+          class="nav-link text-end"
+          data-bs-toggle="collapse"
+          data-bs-target=".KanbasMenu"
+          aria-expanded="false"
+          aria-controls="KanbasMenu CommonContent"
+        >
+          <i class="fa-solid fa-xmark text-secondary"></i>
+        </a>
+
+        <a class="nav-link" href="/Kanbas/Profile/index.html" active>
+          <i class="fa-regular fa-user sidebar-icon account-icon"></i>
+          <span>Account</span>
+        </a>
+
+        <a class="nav-link" href="/Kanbas/Courses/Home/screen.html">
+          <i class="fa-solid fa-book sidebar-icon"></i>
+          Courses
+        </a>
+
+        <a class="nav-link" href="/Kanbas/Dashboard/index.html">
+          <i class="fa-solid fa-gauge sidebar-icon"></i> Dashboard
+        </a>
+
+        <a class="nav-link" href="#">
+          <i class="fa-regular fa-calendar-days sidebar-icon"></i>
+          Calendar</a
+        >
+
+        <a class="nav-link" href="#">
+          <i class="fa-solid fa-inbox sidebar-icon"></i>
+          Inbox</a
+        >
+
+        <a class="nav-link" href="#">
+          <i class="fa-regular fa-clock sidebar-icon"></i>
+          History</a
+        >
+
+        <a class="nav-link" href="#">
+          <i class="fa-solid fa-tv sidebar-icon"></i>
+          Studio</a
+        >
+
+        <a class="nav-link" href="#">
+          <i class="fa-solid fa-right-from-bracket sidebar-icon"></i>
+          Commons</a
+        >
+
+        <a class="nav-link" href="#">
+          <i class="fa-regular fa-circle-question sidebar-icon"></i>
+          Help</a
+        >
+      </nav>
+    </div>
+
+    <div
+      class="row container-fluid collapse show KanbasMenu CourseMenu"
+      id="CommonContent"
+    >
+      <div class="col-1 m-0 p-0 wd-kanbas-container d-none d-md-block">
+        <div class="wd-kanbas-nav bg-black">
+          <a class="nav-link" href="/Kanbas/Profile/index.html">
+            <img src="..\..\..\images\neu-logo.jpg" alt="logo" id="logo" />
+          </a>
+
+          <a class="nav-link active" href="/Kanbas/Profile/index.html">
+            <i class="fa-regular fa-user sidebar-icon account-icon"></i>
+            <span>Account</span>
+          </a>
+
+          <a class="nav-link" href="/Kanbas/Courses/Home/screen.html">
+            <i class="fa-solid fa-book sidebar-icon"></i>
+            Courses
+          </a>
+
+          <a class="nav-link" href="/Kanbas/Dashboard/index.html">
+            <i class="fa-solid fa-gauge sidebar-icon"></i> Dashboard
+          </a>
+
+          <a class="nav-link" href="#">
+            <i class="fa-regular fa-calendar-days sidebar-icon"></i>
+            Calendar</a
+          >
+
+          <a class="nav-link" href="#">
+            <i class="fa-solid fa-inbox sidebar-icon"></i>
+            Inbox</a
+          >
+
+          <a class="nav-link" href="#">
+            <i class="fa-regular fa-clock sidebar-icon"></i>
+            History</a
+          >
+
+          <a class="nav-link" href="#">
+            <i class="fa-solid fa-tv sidebar-icon"></i>
+            Studio</a
+          >
+
+          <a class="nav-link" href="#">
+            <i class="fa-solid fa-right-from-bracket sidebar-icon"></i>
+            Commons</a
+          >
+
+          <a class="nav-link" href="#">
+            <i class="fa-regular fa-circle-question sidebar-icon"></i>
+            Help</a
+          >
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="col d-none d-md-block mb-10">
+            <nav class="navbar">
+              <div class="container-fluid">
+                <button class="navbar-toggler border-0" type="button">
+                  <span class="navbar-toggler-icon"></span>
+                  Chainathan's Profile
+                </button>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 wd-sidebar-nav d-none d-md-block">
+            <nav class="nav flex-column">
+              <a class="nav-link" href="#">Notifications</a>
+              <a class="nav-link active" href="/Kanbas/Profile/index.html">
+                Profile
+              </a>
+              <a class="nav-link" href="#">Files</a>
+              <a class="nav-link" href="#">Settings</a>
+              <a class="nav-link" href="#">ePortfolios</a>
+              <a class="nav-link" href="#">Shared Content</a>
+              <a class="nav-link" href="#">The Hub</a>
+              <a class="nav-link" href="#">Qwickly Course Tools</a>
+              <a class="nav-link" href="#">Global Announcements</a>
+            </nav>
+          </div>
+          <div class="col wd-profile-main-content mt-2">
+            <div>
+              <i class="fa-regular fa-circle-user fa-9x"></i>
+              <a class="float-end btn btn-light active" href="edit.html">
+                <i class="fa-solid fa-pencil"></i>
+                Edit Profile
+              </a>
+            </div>
+            <h1>Chainathan</h1>
+            <br />
+            <h2>Contact</h2>
+            <p>
+              No registered service, you can add some on
+              <a href="#" class="text-danger">Setting</a> page.
+            </p>
+            <h2>Biography</h2>
+            <p>MS.CS Student at Northeastern Univeristy</p>
+            <h2>Links</h2>
+            <p>
+              <a href="https://www.youtube.com/@WebDevTV" class="text-danger">
+                <i class="fa-solid fa-link"></i>
+                YouTube
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

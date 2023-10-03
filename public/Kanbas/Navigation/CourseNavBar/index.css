@@ -1,0 +1,19 @@
+.wd-sidebar-nav .nav-link {
+  color: red !important; /* Default text color */
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.wd-sidebar-nav .nav-link:hover {
+  color: black !important; /* Hover text color */
+}
+
+.wd-sidebar-nav .nav-link.active {
+  background-color: white !important; /* Active background color */
+  color: black !important; /* Active text color */
+  border-left: 2px solid black !important;
+}
+
+.collapsed-text {
+  font-size: small;
+}
