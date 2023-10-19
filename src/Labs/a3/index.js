@@ -1,0 +1,47 @@
+import Add from "./Add";
+import JavaScript from "./JavaScript";
+import PathParameters from "./PathParameters";
+import TodoItem from "./todos/TodoItem";
+import TodoList from "./todos/TodoList";
+import Nav from "../../Nav";
+import Styles from "./Styles";
+import Classes from "./Classes";
+import ConditionalOutput from "./ConditionalOutput";
+
+function Assignment3() {
+  return (
+    <div>
+      <Nav />
+      <h2>Assignment 3</h2>
+      <Styles />
+      <Classes />
+      <TodoList />
+      <ConditionalOutput />
+      <hr />
+      <ul className="list-group">
+        <TodoItem
+          todo={{
+            title: "Buy milk",
+            done: true,
+            status: "COMPLETE",
+          }}
+        />
+        <TodoItem
+          todo={{
+            title: "Pick up kids",
+            done: false,
+            status: "IN_PROGRESS",
+          }}
+        />
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+      </ul>
+      <TodoItem />
+      <PathParameters />
+      <JavaScript />
+    </div>
+  );
+}
+
+export default Assignment3;

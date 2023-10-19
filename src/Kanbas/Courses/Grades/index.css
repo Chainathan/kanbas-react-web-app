@@ -1,0 +1,22 @@
+.wd-grade-table {
+  text-align: center;
+}
+
+.wd-grade-table td input {
+  text-align: center;
+  justify-content: center;
+  width: 10rem;
+}
+.wd-grade-table td {
+  text-align: center;
+  justify-content: center;
+  width: 10rem;
+}
+.wd-grade-table th {
+  text-align: center;
+  justify-content: center;
+  width: 10rem;
+}
+.wd-grade-table label {
+  font-weight: 550;
+}

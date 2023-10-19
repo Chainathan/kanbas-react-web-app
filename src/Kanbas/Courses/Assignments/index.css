@@ -1,0 +1,44 @@
+.wd-assignment-content ul *.list-group-item {
+  border-radius: 0;
+}
+
+.wd-assignment-content li {
+  box-shadow: inset 5px 0 0 0 green;
+}
+.wd-assignment-content li a {
+  text-decoration: none;
+  color: grey;
+  font-weight: 600;
+}
+.wd-assignment-content li a:hover {
+  text-decoration: underline;
+}
+
+.wd-assignment-content li p {
+  font-size: x-small;
+  color: gray;
+  text-wrap: wrap;
+  margin-top: 0px;
+}
+.wd-assignment-content li p span {
+  font-size: x-small;
+  font-weight: 550;
+}
+
+.wd-assignment-desc {
+  width: 90%;
+}
+
+.wd-assignment-header {
+  justify-content: center;
+  align-items: center;
+}
+.wd-assignment-item-title {
+  text-align: left;
+  color: black;
+  font-weight: 550;
+}
+.wd-assignment-item-title div span {
+  color: black;
+  border: 1px solid grey;
+}

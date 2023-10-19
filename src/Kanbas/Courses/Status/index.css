@@ -1,0 +1,54 @@
+.wd-course-status h2 {
+  font-weight: 500;
+  font-size: larger;
+}
+
+.wd-course-status-actions a {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.wd-course-status-todo {
+  width: 200px;
+  margin-top: 20px;
+}
+
+.wd-course-status-list-item {
+  border: transparent;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  color: red;
+  font-size: small;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.wd-course-status-list-item > div :nth-child(2) {
+  color: red;
+  font-size: medium;
+  margin-left: 5px;
+}
+
+.list-group > a > small {
+  font-size: x-small;
+  color: gray;
+  margin-left: 20px;
+  text-wrap: wrap;
+  margin-top: 0px;
+}
+
+.wd-course-status-upcoming {
+  width: 200px;
+  margin-top: 20px;
+}
+.wd-course-status-upcoming-header > :nth-child(2) {
+  flex: 1;
+  justify-content: right;
+  text-align: right;
+}
+
+.wd-course-status-list-item:hover {
+  text-decoration: underline;
+}
