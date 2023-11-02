@@ -1,4 +1,9 @@
+import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link, useParams } from "react-router-dom";
+
 const AssignmentButtons = () => {
+  const { courseId } = useParams();
   return (
     <div class="row">
       <div class="col-8">
@@ -12,13 +17,18 @@ const AssignmentButtons = () => {
         <div class="float-end">
           <div class="d-inline-flex gap-1">
             <button type="button" class="btn btn-sm btn-light">
-              <i class="fa fa-plus"></i> Group
+              + Group
             </button>
-            <button type="button" class="btn btn-sm btn-danger">
-              <i class="fa fa-plus"></i> Assignment
-            </button>
+            <Link
+              to={`/Kanbas/Courses/${courseId}/Assignments/${new Date()
+                .getTime()
+                .toString()}`}
+              className="btn btn-sm btn-danger"
+            >
+              + Assignment
+            </Link>
             <button type="button" class="btn btn-sm btn-light">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
+              <FontAwesomeIcon icon={faEllipsisVertical} />
             </button>
           </div>
         </div>

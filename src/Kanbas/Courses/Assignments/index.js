@@ -1,21 +1,31 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
 import AssignmentButtons from "./AssignmentButtons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { useSelector, useDispatch } from "react-redux";
 import {
-  faPlus,
-  faCheckCircle,
-  faEllipsisV,
-  faListAlt,
-} from "@fortawesome/free-solid-svg-icons";
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+} from "./assignmentsReducer";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  const dispatch = useDispatch();
+  const assignments = useSelector(
+    (state) => state.assignmentsReducer.assignments
+  );
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId
   );
+  const handleDelete = (assignmentId) => {
+    const confirmDelete = window.confirm("Delete this assignment?");
+    if (confirmDelete) {
+      dispatch(deleteAssignment(assignmentId));
+    }
+  };
   return (
     <div className="wd-assignment-content">
       <h2>Assignments for course {courseId}</h2>
@@ -48,6 +58,12 @@ function Assignments() {
                 </span>
               </div>
               <div>
+                <button
+                  onClick={() => handleDelete(assignment._id)}
+                  className="btn btn-danger float-end"
+                >
+                  Delete
+                </button>
                 <FontAwesomeIcon
                   icon={faCheckCircle}
                   style={{ color: "green" }}
