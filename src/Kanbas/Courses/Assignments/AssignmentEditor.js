@@ -1,44 +1,54 @@
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
 import {
   addAssignment,
-  deleteAssignment,
   updateAssignment,
   setAssignment,
 } from "./assignmentsReducer";
+import * as client from "./client";
 
 function AssignmentEditor() {
   const { assignmentId } = useParams();
+  const { courseId } = useParams();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const assignments = useSelector(
     (state) => state.assignmentsReducer.assignments
   );
 
-  let assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  const assignment = useSelector(
+    (state) => state.assignmentsReducer.assignment
+  );
 
-  if (assignments.some((assignment) => assignment._id === assignmentId)) {
-    dispatch(
-      setAssignment(
-        assignments.find((assignment) => assignment._id === assignmentId)
-      )
-    );
-    assignment = assignments.find(
-      (assignment) => assignment._id === assignmentId
-    );
-  }
-
-  const { courseId } = useParams();
-  const navigate = useNavigate();
-
-  const handleSave = () => {
+  useEffect(() => {
     if (assignments.some((assignment) => assignment._id === assignmentId)) {
-      dispatch(updateAssignment(assignment));
-    } else {
+      dispatch(
+        setAssignment(
+          assignments.find((assignment) => assignment._id === assignmentId)
+        )
+      );
+    }
+  }, [assignmentId]);
+  const handleAdd = () => {
+    client.createAssignment(courseId, assignment).then((assignment) => {
       dispatch(
         addAssignment({ ...assignment, course: courseId, _id: assignmentId })
       );
+    });
+  };
+  const handleUpdate = async () => {
+    const status = await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
+  };
+
+  const handleSave = () => {
+    if (assignments.some((assignment) => assignment._id === assignmentId)) {
+      handleUpdate();
+    } else {
+      handleAdd();
     }
     dispatch(
       setAssignment({ title: "New Assignment", description: "New Description" })

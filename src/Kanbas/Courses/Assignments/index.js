@@ -1,15 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import AssignmentButtons from "./AssignmentButtons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  addAssignment,
-  deleteAssignment,
-  updateAssignment,
-  setAssignment,
-} from "./assignmentsReducer";
+import { deleteAssignment, setAssignments } from "./assignmentsReducer";
+import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -23,9 +19,16 @@ function Assignments() {
   const handleDelete = (assignmentId) => {
     const confirmDelete = window.confirm("Delete this assignment?");
     if (confirmDelete) {
-      dispatch(deleteAssignment(assignmentId));
+      client.deleteAssignment(assignmentId).then((status) => {
+        dispatch(deleteAssignment(assignmentId));
+      });
     }
   };
+  useEffect(() => {
+    client
+      .findAssignmentsForCourse(courseId)
+      .then((assignments) => dispatch(setAssignments(assignments)));
+  }, [courseId]);
   return (
     <div className="wd-assignment-content">
       <h2>Assignments for course {courseId}</h2>

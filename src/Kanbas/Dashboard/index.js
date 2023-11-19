@@ -1,14 +1,44 @@
 import { Link } from "react-router-dom";
 import "./index.css";
+import { useState, useEffect } from "react";
 
-function Dashboard({
-  courses,
-  course,
-  setCourse,
-  addNewCourse,
-  deleteCourse,
-  updateCourse,
-}) {
+import * as client from "../Courses/client";
+
+function Dashboard() {
+  const [courses, setCourses] = useState([]);
+  const [course, setCourse] = useState({});
+  const fetchCourses = async () => {
+    const courses = await client.findAllCourses();
+    setCourses(courses);
+  };
+
+  const deleteCourse = async (id) => {
+    try {
+      await client.deleteCourse(id);
+      setCourses(courses.filter((course) => course._id !== id));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const updateCourse = async () => {
+    try {
+      await client.updateCourse(course);
+      setCourses(courses.map((c) => (c._id === course._id ? course : c)));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const addNewCourse = async () => {
+    const newCourse = await client.addCourse(course);
+    setCourses([newCourse, ...courses]);
+  };
+
+  useEffect(() => {
+    fetchCourses();
+  }, []);
+
   return (
     <div className="wd-grid-container">
       <div className="wd-grid-col-main-content content-padding">
@@ -45,7 +75,13 @@ function Dashboard({
           <button onClick={addNewCourse} className="btn btn-success">
             Add
           </button>
-          <button onClick={updateCourse} className="btn btn-warning">
+          <button
+            onClick={(event) => {
+              event.preventDefault();
+              updateCourse(course);
+            }}
+            className="btn btn-warning"
+          >
             Update
           </button>
         </div>
