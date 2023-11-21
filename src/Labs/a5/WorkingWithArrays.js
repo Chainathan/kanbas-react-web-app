@@ -12,10 +12,12 @@ function WorkingWithArrays() {
     completed: false,
   });
 
-  const API = "http://localhost:4000/a5/todos";
+  const API = "https://kanbas-node-server-app-uq9r.onrender.com/a5/todos";
 
   const createTodo = async () => {
-    const response = await axios.get("http://localhost:4000/a5/todos/create");
+    const response = await axios.get(
+      "https://kanbas-node-server-app-uq9r.onrender.com/a5/todos/create"
+    );
     setTodos(response.data);
   };
 
@@ -30,7 +32,9 @@ function WorkingWithArrays() {
   };
 
   const fetchTodos = async () => {
-    const response = await axios.get("http://localhost:4000/a5/todos");
+    const response = await axios.get(
+      "https://kanbas-node-server-app-uq9r.onrender.com/a5/todos"
+    );
     setTodos(response.data);
   };
 
@@ -307,7 +311,7 @@ function WorkingWithArrays() {
     //   />
 
     //   <a
-    //     href={`http://localhost:4000/a5/todos/${id}/title/${title}`}
+    //     href={`https://kanbas-node-server-app-uq9r.onrender.com/a5/todos/${id}/title/${title}`}
     //     className="btn btn-primary"
     //   >
     //     Update Todo Title
@@ -326,13 +330,13 @@ function WorkingWithArrays() {
     //     onChange={(e) => setId(e.target.value)}
     //   />
     //   <a
-    //     href={`http://localhost:4000/a5/todos/${id}`}
+    //     href={`https://kanbas-node-server-app-uq9r.onrender.com/a5/todos/${id}`}
     //     className="btn btn-primary"
     //   >
     //     Fetch Todo {id}
     //   </a>
     //   <h2>Fetch Array</h2>
-    //   <a href="http://localhost:4000/a5/todos" className="btn btn-primary">
+    //   <a href="https://kanbas-node-server-app-uq9r.onrender.com/a5/todos" className="btn btn-primary">
     //     Fetch Todos
     //   </a>
 

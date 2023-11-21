@@ -9,20 +9,22 @@ function EncodingParametersInURLs() {
   const [result, setResult] = useState(0);
   const fetchSum = async (a, b) => {
     const response = await axios.get(
-      `http://localhost:4000/a5/add/axios/${a}/${b}`
+      `https://kanbas-node-server-app-uq9r.onrender.com/a5/add/axios/${a}/${b}`
     );
     setResult(response.data);
   };
   const fetchSubtraction = async (a, b) => {
     const response = await axios.get(
-      `http://localhost:4000/a5/subtract/axios/${a}/${b}`
+      `https://kanbas-node-server-app-uq9r.onrender.com/a5/subtract/axios/${a}/${b}`
     );
     setResult(response.data);
   };
 
   const [welcome, setWelcome] = useState("");
   const fetchWelcome = async () => {
-    const response = await axios.get("http://localhost:4000/a5/welcome");
+    const response = await axios.get(
+      "https://kanbas-node-server-app-uq9r.onrender.com/a5/welcome"
+    );
     setWelcome(response.data);
   };
   useEffect(() => {
@@ -52,7 +54,7 @@ function EncodingParametersInURLs() {
         }
       />
       <a
-        href={`http://localhost:4000/a5/assignment/title/${assignment.title}`}
+        href={`https://kanbas-node-server-app-uq9r.onrender.com/a5/assignment/title/${assignment.title}`}
         className="btn btn-primary"
       >
         Update Assignment Title
@@ -61,14 +63,14 @@ function EncodingParametersInURLs() {
       <h4>Assignment</h4>
 
       <a
-        href={`http://localhost:4000/a5/assignment/title`}
+        href={`https://kanbas-node-server-app-uq9r.onrender.com/a5/assignment/title`}
         className="btn btn-primary"
       >
         Get Assignment Title
       </a>
       <hr />
       <a
-        href={`http://localhost:4000/a5/assignment`}
+        href={`https://kanbas-node-server-app-uq9r.onrender.com/a5/assignment`}
         className="btn btn-primary"
       >
         Get Assignment
@@ -109,26 +111,26 @@ function EncodingParametersInURLs() {
 
       <h3>Query Parameters</h3>
       <a
-        href={`http://localhost:4000/a5/calculator?a=${a}&b=${b}&operation=add`}
+        href={`https://kanbas-node-server-app-uq9r.onrender.com/a5/calculator?a=${a}&b=${b}&operation=add`}
         className="btn btn-primary"
       >
         Add {a} + {b}
       </a>
       <a
-        href={`http://localhost:4000/a5/calculator?a=${a}&b=${b}&operation=subtract`}
+        href={`https://kanbas-node-server-app-uq9r.onrender.com/a5/calculator?a=${a}&b=${b}&operation=subtract`}
         className="btn btn-danger"
       >
         Substract {a} - {b}
       </a>
       <h3>Path Parameters</h3>
       <a
-        href={`http://localhost:4000/a5/add/${a}/${b}`}
+        href={`https://kanbas-node-server-app-uq9r.onrender.com/a5/add/${a}/${b}`}
         className="btn btn-primary"
       >
         Add {a} + {b}
       </a>
       <a
-        href={`http://localhost:4000/a5/subtract/${a}/${b}`}
+        href={`https://kanbas-node-server-app-uq9r.onrender.com/a5/subtract/${a}/${b}`}
         className="btn btn-danger"
       >
         Substract {a} - {b}
