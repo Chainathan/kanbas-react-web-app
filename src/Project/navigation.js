@@ -5,12 +5,9 @@ import { useLocation } from "react-router-dom";
 function Navigation() {
   const { pathname } = useLocation();
   const links = [
-    { to: "/project/home", label: "Home" },
     { to: "/project/signin", label: "Sign in" },
     { to: "/project/signup", label: "Sign up" },
     { to: "/project/account", label: "Account" },
-    { to: "/project/search", label: "Search" },
-    { to: "/project/users", label: "Users" },
   ];
   const active = (path) => (pathname.includes(path) ? "active" : "");
   return (

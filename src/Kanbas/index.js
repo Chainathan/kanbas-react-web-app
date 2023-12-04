@@ -6,7 +6,6 @@ import Dashboard from "./Dashboard";
 import "./index.css";
 import store from "./store";
 import { Provider } from "react-redux";
-import Signin from "../Project/users/signin";
 
 function Kanbas() {
   return (
