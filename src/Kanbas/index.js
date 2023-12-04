@@ -6,6 +6,7 @@ import Dashboard from "./Dashboard";
 import "./index.css";
 import store from "./store";
 import { Provider } from "react-redux";
+import Signin from "../Project/users/signin";
 
 function Kanbas() {
   return (
@@ -19,6 +20,7 @@ function Kanbas() {
             <Route path="Dashboard" element={<Dashboard />} />
             <Route path="Courses/:courseId/*" element={<Courses />} />
             <Route path="Calendar" element={<h1>Calendar</h1>} />
+            {/* <Route path="/signin" element={<Signin />} /> */}
           </Routes>
         </div>
       </div>
